@@ -1,0 +1,2 @@
+Copier >= 5.1.0
+MarkupSafe <= 2.0.1
