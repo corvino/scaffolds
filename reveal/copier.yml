@@ -1,0 +1,8 @@
+name: name
+display_name: display_name
+
+_subdirectory: template
+
+_templates_suffix: .j2
+# Waiting on 6 for this option
+# _templates_suffix: ""

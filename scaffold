@@ -1,0 +1,26 @@
+#! /usr/bin/env bash
+
+if [ "$#" -ne 1 ]; then
+    echo "usage: scaffold template_name"
+    exit 1
+fi
+
+SOURCE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TARGET_DIR="$(pwd)"
+TEMPLATE_NAME=$1
+TEMPLATE_DIR="$SOURCE_DIR/$TEMPLATE_NAME"
+
+if [ ! -d "$TEMPLATE_DIR" ]; then
+    echo "could not find template $TEMPLATE_NAME"
+    exit 1
+fi
+
+# Additional argument processing would be good here.
+# It would be nice to be override the default name and display
+# name, in additional to having sensible defaults.
+NAME="$(basename $TARGET_DIR)"
+
+echo $TARGET_DIR_NAME
+# -d key/value pairs to the template(s). A mechanism for adding arbitrary
+# key/value pairs could also be useful.
+copier -d name="$NAME" -d display_name="$NAME" "${TEMPLATE_DIR}" .
