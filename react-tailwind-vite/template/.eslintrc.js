@@ -14,7 +14,7 @@ module.exports = {
     "comma-dangle": ["error", "never"],
     "no-unused-vars": ["error"],
     "react/display-name": "off",
-    "react/prop-types": "disabled"
+    "react/prop-types": 0
   },
   settings: {
     react: {

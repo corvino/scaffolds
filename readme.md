@@ -4,9 +4,7 @@ A collection of new project templates created with [copier](https://copier.readt
 
 ### scaffold script
 
-The scaffold script invokes copier on the specified copier template, using the working directory for the template name variables.
-
-If usage is frequent, a wrapper script might be useful, such as [scaffold](https://github.com/corvino/tilde/blob/master/bin/scaffold).
+The scaffold script invokes copier on the specified template, deriving the template name variables from the using current working directory.
 
 Future features that may be interesting/necessary are:
 
@@ -18,6 +16,13 @@ Future features that may be interesting/necessary are:
 To install dependencies.
 
     pip install -r requirements.txt
+
+### Usage
+
+Run in new project directoy
+
+    # Use path to scaffold script and template to invoke
+    ~/code/scaffolds/scaffold react-tailwind-vite
 
 ### Copier dependency issues
 
